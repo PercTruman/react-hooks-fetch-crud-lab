@@ -7,7 +7,11 @@ function QuestionItem({ question }) {
     <option key={index} value={index}>
       {answer}
     </option>
-  ));
+    ));
+  function handleDeleteClick(){
+
+  }
+
 
   return (
     <li>
@@ -17,7 +21,7 @@ function QuestionItem({ question }) {
         Correct Answer:
         <select defaultValue={correctIndex}>{options}</select>
       </label>
-      <button>Delete Question</button>
+      <button onClick={handleDeleteClick}>Delete Question</button>
     </li>
   );
 }
