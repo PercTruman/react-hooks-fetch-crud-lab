@@ -7,7 +7,7 @@ function App() {
   const [page, setPage] = useState("List");
   const [questionList, setQuestionList]= useState([])
 
-  function handleDeleteQuestion(deletedQuestion)
+ 
 
   useEffect(()=>{
     fetch(`http://localhost:4000/questions`)
@@ -19,7 +19,7 @@ function App() {
     <main>
       <AdminNavBar onChangePage={setPage} />
       {page === "Form" ? <QuestionForm questionList={questionList} setQuestionList={setQuestionList}/> 
-      : <QuestionList handleDeleteQuestion ={handleDeleteQuestion} questionList={questionList} setQuestionList={setQuestionList}/>}
+      : <QuestionList questionList={questionList} setQuestionList={setQuestionList}/>}
     </main>
   );
 }
