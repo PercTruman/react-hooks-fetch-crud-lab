@@ -9,6 +9,10 @@ function QuestionItem({ question }) {
     </option>
     ));
   function handleDeleteClick(){
+    fetch(`http://localhost:4000/questions/${question.id}`, {
+      method:'DELETE',
+    })
+
 
   }
 
